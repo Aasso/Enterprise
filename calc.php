@@ -5,5 +5,4 @@
  * Date: 14.08.2015
  * Time: 15:48
  */
-
 echo "Hello world!";
