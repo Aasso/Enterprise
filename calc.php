@@ -10,7 +10,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset=windows-1251">
     <title>Calc</title>
     <style>
   body{
@@ -22,12 +22,12 @@
 </head>
 <body>
 <form action="calc.php" method="POST">
-     <label for="one">first</label>
-     <input type="text" id="one" name="first">
-     <label for="operator">operation</label>
-     <input type="text" id="operator" name="oper">
-     <label for="two">second</label>
-     <input type="text" id="two">
+     <label for="one">first</label><br />
+     <input type="text" id="one" name="first"><br />
+     <label for="operator">operation</label><br />
+     <input type="text" id="operator" name="oper"><br />
+     <label for="two">second</label><br />
+     <input type="text" id="two"><br />
     <input type="submit" value="Вычислить">
 </form>
 </body>
