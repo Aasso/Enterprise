@@ -16,11 +16,11 @@ if(isset($_POST['two']) AND $_POST['two']!= null ){
     $two = $_POST['two'];
 }*/
 // в начале выдавал ошибки в 19 20 21 строке warning
-error_reporting(0);
+//error_reporting(0);
 if(isset($_POST)){
     $first = $_POST['first'];
     $oper = $_POST['oper'];
-    $two = $_POST['two'];
+    $two = $_POST['first'];
 //    Очистим от мусора
     //echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
     switch ($oper) {
@@ -70,10 +70,10 @@ if(isset($_POST)){
     <input type="text" id="two" name="two"><br />
 */?>
 
-    <input type="button" value="1"><input type="button" value="2"><input type="button" value="3"><input type="button" value="+"><br/>
-    <input type="button" value="4"><input type="button" value="5"><input type="button" value="6"><input type="button" value="-"><br/>
-    <input type="button" value="7"><input type="button" value="8"><input type="button" value="9"><input type="button" value="/"><br/>
-    <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;"><br/>
+    <input type="button" value="1" name="first"><input type="button" value="2" name="first"><input type="button" value="3" name="first"><input type="button" value="+" name="oper"><br/>
+    <input type="button" value="4" name="first"><input type="button" value="5" name="first"><input type="button" value="6" name="first"><input type="button" value="-" name="oper"><br/>
+    <input type="button" value="7" name="first"><input type="button" value="8" name="first"><input type="button" value="9" name="first"><input type="button" value="/" name="oper"><br/>
+    <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;" name="oper"><br/>
 
 </form>
 </body>
