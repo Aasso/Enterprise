@@ -5,7 +5,7 @@
  * Date: 14.08.2015
  * Time: 15:48
  */
-if(isset($_POST['first']) AND $_POST['first']!= null ){
+/*if(isset($_POST['first']) AND $_POST['first']!= null ){
     $first = $_POST['first'];
 }
 if(isset($_POST['oper']) AND $_POST['oper']!= null ){
@@ -13,10 +13,14 @@ if(isset($_POST['oper']) AND $_POST['oper']!= null ){
 }
 if(isset($_POST['two']) AND $_POST['two']!= null ){
     $two = $_POST['two'];
-}
+}*/
 
 if(isset($_POST)){
-    echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
+    $first = $_POST['first'];
+    $oper = $_POST['oper'];
+    $two = $_POST['two'];
+//    Очистим от мусора
+    //echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
     switch ($oper) {
         case "+":
             $result = $first + $two;
@@ -27,7 +31,7 @@ if(isset($_POST)){
             echo "<br/>Результат = " . $result;
             break;
         case "-":
-            $result = $first- $two;
+            $result = $first - $two;
             echo "<br/>Результат = " . $result;
             break;
         case "/":
@@ -36,6 +40,8 @@ if(isset($_POST)){
             break;
         default:
             echo "<br/>Результат = " . "Вы ввели неверный операнд";
+//            На сколько я знаю, тут тоже нужен break
+            break;
     }
 }
 
