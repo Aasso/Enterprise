@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by PhpStorm.
@@ -14,7 +15,8 @@ if(isset($_POST['oper']) AND $_POST['oper']!= null ){
 if(isset($_POST['two']) AND $_POST['two']!= null ){
     $two = $_POST['two'];
 }*/
-
+// в начале выдавал ошибки в 19 20 21 строке warning
+error_reporting(0);
 if(isset($_POST)){
     $first = $_POST['first'];
     $oper = $_POST['oper'];
@@ -44,30 +46,35 @@ if(isset($_POST)){
             break;
     }
 }
-
 ?>
 <!doctype html>
 <html lang="ru">
 <head>
     <title>Calc</title>
     <style>
-  body{
-        position:absolute;
-      	top: 100px;
-      	left: 200px;
-  }
+        body{
+            position:absolute;
+            top: 100px;
+            left: 200px;
+        }
     </style>
 </head>
 <body>
 <form action="" method="POST">
-     <label for="one">first</label><br />
-     <input type="text" id="one" name="first"><br />
-     <label for="operator">operation</label><br />
-     <input type="text" id="operator" name="oper"><br />
-     <label for="two">second</label><br />
-     <input type="text" id="two" name="two"><br />
-    <input type="submit" value="Отправить">
+    <?/*
+    <label for="one">first</label><br />
+    <input type="text" id="one" name="first"><br />
+    <label for="operator">operation</label><br />
+    <input type="text" id="operator" name="oper"><br />
+    <label for="two">second</label><br />
+    <input type="text" id="two" name="two"><br />
+*/?>
+
+    <input type="button" value="1"><input type="button" value="2"><input type="button" value="3"><input type="button" value="+"><br/>
+    <input type="button" value="4"><input type="button" value="5"><input type="button" value="6"><input type="button" value="-"><br/>
+    <input type="button" value="7"><input type="button" value="8"><input type="button" value="9"><input type="button" value="/"><br/>
+    <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;"><br/>
+
 </form>
 </body>
 </html>
-
