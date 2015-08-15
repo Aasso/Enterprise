@@ -5,12 +5,14 @@
  * Date: 14.08.2015
  * Time: 15:48
  */
+
+
 ?>
 <!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор</title>
+    <title>Calc</title>
     <style>
   body{
         position:absolute;
@@ -20,13 +22,13 @@
     </style>
 </head>
 <body>
-<form action="" method="POST">
-    <label for="one">Первое число</label>
-    <input type="text" id="one" name="first">
-    <label for="operator">Введите оператор</label>
-    <input type="text" id="operator" name="oper">
-    <label for="two">Второе число</label>
-    <input type="text" id="two">
+<form action="calc.php" method="POST">
+     <label for="one">first</label>
+     <input type="text" id="one" name="first">
+     <label for="operator">operation</label>
+     <input type="text" id="operator" name="oper">
+     <label for="two">second</label>
+     <input type="text" id="two">
     <input type="submit" value="Вычислить">
 </form>
 </body>
