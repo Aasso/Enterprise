@@ -6,7 +6,6 @@
  * Time: 15:48
  */
 
-
 ?>
 <!doctype html>
 <html lang="ru">
