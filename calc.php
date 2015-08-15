@@ -14,10 +14,29 @@ if(isset($_POST['oper']) AND $_POST['oper']!= null ){
 if(isset($_POST['two']) AND $_POST['two']!= null ){
     $two = $_POST['two'];
 }
+
 if(isset($_POST)){
     echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
-    $result = $first + $two;
-    echo "Результат = ".$result;
+    switch ($oper) {
+        case "+":
+            $result = $first + $two;
+            echo "<br/>Результат = " . $result;
+            break;
+        case "*":
+            $result = $first * $two;
+            echo "<br/>Результат = " . $result;
+            break;
+        case "-":
+            $result = $first- $two;
+            echo "<br/>Результат = " . $result;
+            break;
+        case "/":
+            $result = $first / $two;
+            echo "<br/>Результат = " . $result;
+            break;
+        default:
+            echo "<br/>Результат = " . "Вы ввели неверный операнд";
+    }
 }
 
 ?>
