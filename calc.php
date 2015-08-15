@@ -12,9 +12,14 @@ if(isset($_POST['oper']) AND $_POST['oper']!= null ){
     $oper = $_POST['oper'];
 }
 if(isset($_POST['two']) AND $_POST['two']!= null ){
-    $oper = $_POST['two'];
+    $two = $_POST['two'];
 }
-echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
+if(isset($_POST)){
+    echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
+    $result = $first + $two;
+    echo "Результат = ".$result;
+}
+
 ?>
 <!doctype html>
 <html lang="ru">
