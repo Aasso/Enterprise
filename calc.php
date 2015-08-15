@@ -5,12 +5,20 @@
  * Date: 14.08.2015
  * Time: 15:48
  */
-
+if(isset($_POST['first']) AND $_POST['first']!= null ){
+    $first = $_POST['first'];
+}
+if(isset($_POST['oper']) AND $_POST['oper']!= null ){
+    $oper = $_POST['oper'];
+}
+if(isset($_POST['two']) AND $_POST['two']!= null ){
+    $oper = $_POST['two'];
+}
+echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
 ?>
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset=windows-1251">
     <title>Calc</title>
     <style>
   body{
@@ -21,14 +29,14 @@
     </style>
 </head>
 <body>
-<form action="calc.php" method="POST">
+<form action="" method="POST">
      <label for="one">first</label><br />
      <input type="text" id="one" name="first"><br />
      <label for="operator">operation</label><br />
      <input type="text" id="operator" name="oper"><br />
      <label for="two">second</label><br />
-     <input type="text" id="two"><br />
-    <input type="submit" value="Вычислить">
+     <input type="text" id="two" name="two"><br />
+    <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ">
 </form>
 </body>
 </html>
