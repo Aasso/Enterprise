@@ -34,16 +34,10 @@ $age = (int)$_POST['age'];
         echo "Вы ввели не верно";
     }
 $pol = $_POST['pol'];
+    echo "<br/>Возраст = " . $pol;
 $cont = $_POST['cont'];
-
-
-
-
-
-    echo "<br/>Возраст = " . $age;
     echo "<br/>Страна = " . $cont;
 
-}
 ?>
 <h2>Регистрация</h2>
 <form class="form-horizontal">
