@@ -19,11 +19,11 @@ if(isset($_POST['two']) AND $_POST['two']!= null ){
 //error_reporting(0);
 if(isset($_POST)){
     $first = $_POST['first'];
-    $oper = $_POST['oper'];
-    $two = $_POST['first'];
+    $opert = $_POST['opert'];
+    $two = $_POST['two'];
 //    Очистим от мусора
     //echo "FIRST: ".$first."<br/>OPER: ".$oper."<br/>TWO: ".$two;
-    switch ($oper) {
+    switch ($opert) {
         case "+":
             $result = $first + $two;
             echo "<br/>Результат = " . $result;
@@ -70,10 +70,10 @@ if(isset($_POST)){
     <input type="text" id="two" name="two"><br />
 */?>
 
-    <input type="button" value="1" name="first"><input type="button" value="2" name="first"><input type="button" value="3" name="first"><input type="button" value="+" name="oper"><br/>
-    <input type="button" value="4" name="first"><input type="button" value="5" name="first"><input type="button" value="6" name="first"><input type="button" value="-" name="oper"><br/>
-    <input type="button" value="7" name="first"><input type="button" value="8" name="first"><input type="button" value="9" name="first"><input type="button" value="/" name="oper"><br/>
-    <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;" name="oper"><br/>
+    <input type="button" value="1" name="first" id="two"><input type="button" value="2" name="first" id="two"> <input type="button" value="+" name="opert"><br/>
+    <input type="button" value="4" name="first" id="two"><input type="button" value="5" name="first" id="two"><input type="button" value="6" name="first" id="two"><input type="button" value="-" name="opert"><br/>
+    <input type="button" value="7" name="first" id="two"><input type="button" value="8" name="first" id="two"><input type="button" value="9" name="first" id="two"><input type="button" value="/" name="opert"><br/>
+    <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;" name="opert"><br/>
 
 </form>
 </body>
