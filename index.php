@@ -13,34 +13,40 @@
 
 Форму регистрации можешь взять с bootstrap
 Удачи!
+
+
+UPDATE 17.08 01:40:
+В принципе не плохо, проверь работает или нет, доделай проверку через html
 */
-if(isset($_POST)){
-$first = $_POST['first'];
+if(isset($_POST)) {
+    $first = $_POST['first'];
     echo "<br/>Имя = " . $first;
-$last = $_POST['two'];
+    $last = $_POST['two'];
     echo "<br/>Фамилия = " . $last;
-$pass = $_POST['pass'];
-    echo "<br/>Пароль = " .$pass;
-$pocht = $_POST['pocht'];
+    $pass = $_POST['pass'];
+    echo "<br/>Пароль = " . $pass;
+    $pocht = $_POST['pocht'];
     echo "<br/>Email = " . $pocht;
-$log = $_POST['log'];
-    if(!preg_match("/^[a-zA-Z0-9]+$/", $log)) {
+    $log = $_POST['log'];
+    // Так как форму мы отправляем не через Ajax, проверку лучше делать через html, в html5 - есть патерны всякие, вот туда подойдет эта регулярка
+    if (!preg_match("/^[a-zA-Z0-9]+$/", $log)) {
         echo "Имя пользователя задано в неправильном формате";
-    }else{
+    } else {
         echo "<br/>Логин = " . $log;
     }
-$age = (int)$_POST['age'];
-    if(!preg_match("/^[0-9]+$/", $age)) {
+    $age = (int)$_POST['age'];
+    if (!preg_match("/^[0-9]+$/", $age)) {
         echo "Вы ввели не верно";
     }
-$pol = $_POST['pol'];
+    $pol = $_POST['pol'];
     echo "<br/>Возраст = " . $pol;
-$cont = $_POST['cont'];
+    $cont = $_POST['cont'];
     echo "<br/>Страна = " . $cont;
-
+    }// Условия нужно закрывать =)
 ?>
 <h2>Регистрация</h2>
-<form class="form-horizontal">
+<!--На сколько я знаю, если не указан метод, то по умолчанию method=GET, а ты принимаешь все переменные через POST, поэтому его нужно указать!-->
+<form class="form-horizontal" action="" method="POST">
   <div class="form-group">
     <label for="lastName">Фамилия:</label>
     <div class="col-xs-9">
