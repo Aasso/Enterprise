@@ -70,7 +70,7 @@ if(isset($_POST)){
     <input type="text" id="two" name="two"><br />
 */?>
 
-    <input type="button" value="1" name="first" id="two"><input type="button" value="2" name="first" id="two"> <input type="button" value="+" name="opert"><br/>
+    <input type="button" value="1" name="first" id="two"><input type="button" value="2" name="first" id="two"> <input type="button" value="3" name="first" id="two"><input type="button" value="+" name="opert"><br/>
     <input type="button" value="4" name="first" id="two"><input type="button" value="5" name="first" id="two"><input type="button" value="6" name="first" id="two"><input type="button" value="-" name="opert"><br/>
     <input type="button" value="7" name="first" id="two"><input type="button" value="8" name="first" id="two"><input type="button" value="9" name="first" id="two"><input type="button" value="/" name="opert"><br/>
     <input type="submit" value="Отправить"><input type="button" value="*" style=" position:absolute; left: 82px;" name="opert"><br/>
