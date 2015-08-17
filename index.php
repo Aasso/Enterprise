@@ -60,7 +60,7 @@ if(isset($_POST)) {
     <div class="form-group">
         <label  for="login">Логин:</label>
         <div class="col-xs-9">
-            <input type="text"  id="login" placeholder="Логин" name="log">
+            <input type="text"  pattern="/^[a-zA-Z0-9]+$/" id="login" placeholder="Логин" name="log">
         </div>
     </div>
     <div class="form-group">
@@ -78,7 +78,7 @@ if(isset($_POST)) {
     <div class="form-group">
         <label  for="age1">Возраст</label>
         <div class="col-xs-9">
-            <input type="text"  id="age1" placeholder="Введите ваш возраст" name="age">
+            <input type="text" pattern="^[ 0-9]+$" id="age1" placeholder="Введите ваш возраст" name="age">
         </div>
     </div>
     <div class="form-group">
